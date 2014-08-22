@@ -1,11 +1,3 @@
-//
-//  FPSCounter.cpp
-//  MMO
-//
-//  Created by Cole Faust on 2/3/14.
-//  Copyright (c) 2014 Cole Faust. All rights reserved.
-//
-
 #include "FPSCounter.h"
 #include "SDL2.h"
 #include <iostream>

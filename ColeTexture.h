@@ -1,11 +1,3 @@
-//
-//  ColeTexture.h
-//  MMO
-//
-//  Created by Cole Faust on 12/24/13.
-//  Copyright (c) 2013 Cole Faust. All rights reserved.
-//
-
 #ifndef __MMO__ColeTexture__
 #define __MMO__ColeTexture__
 

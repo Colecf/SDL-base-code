@@ -1,11 +1,3 @@
-//
-//  ColeButton.h
-//  MMO
-//
-//  Created by Cole Faust on 8/22/14.
-//  Copyright (c) 2014 Cole Faust. All rights reserved.
-//
-
 #ifndef __MMO__ColeButton__
 #define __MMO__ColeButton__
 

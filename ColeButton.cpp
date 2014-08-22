@@ -1,11 +1,3 @@
-//
-//  ColeButton.cpp
-//  MMO
-//
-//  Created by Cole Faust on 8/22/14.
-//  Copyright (c) 2014 Cole Faust. All rights reserved.
-//
-
 #include "ColeButton.h"
 #include "RenderManager.h"
 #include "ColeFontManager.h"

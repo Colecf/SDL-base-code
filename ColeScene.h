@@ -1,11 +1,3 @@
-//
-//  ColeScene.h
-//  MMO
-//
-//  Created by Cole Faust on 1/24/14.
-//  Copyright (c) 2014 Cole Faust. All rights reserved.
-//
-
 #ifndef __MMO__ColeScene__
 #define __MMO__ColeScene__
 

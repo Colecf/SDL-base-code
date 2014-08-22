@@ -1,11 +1,3 @@
-//
-//  GameScene.cpp
-//  MMO
-//
-//  Created by Cole Faust on 3/8/14.
-//  Copyright (c) 2014 Cole Faust. All rights reserved.
-//
-
 #include "GameScene.h"
 #include "RenderManager.h"
 #include "NetworkManager.h"

@@ -1,11 +1,3 @@
-//
-//  ColeTexture.cpp
-//  MMO
-//
-//  Created by Cole Faust on 12/24/13.
-//  Copyright (c) 2013 Cole Faust. All rights reserved.
-//
-
 #include "ColeTexture.h"
 #include "RenderManager.h"
 

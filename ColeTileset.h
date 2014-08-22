@@ -1,11 +1,3 @@
-//
-//  ColeTileset.h
-//  MMO
-//
-//  Created by Cole Faust on 12/28/13.
-//  Copyright (c) 2013 Cole Faust. All rights reserved.
-//
-
 #ifndef __MMO__ColeTileset__
 #define __MMO__ColeTileset__
 

@@ -1,11 +1,3 @@
-//
-//  GameScene.h
-//  MMO
-//
-//  Created by Cole Faust on 3/8/14.
-//  Copyright (c) 2014 Cole Faust. All rights reserved.
-//
-
 #ifndef __MMO__GameScene__
 #define __MMO__GameScene__
 

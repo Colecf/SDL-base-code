@@ -1,11 +1,3 @@
-//
-//  ColeFontManager.cpp
-//  MMO
-//
-//  Created by Cole Faust on 1/18/14.
-//  Copyright (c) 2014 Cole Faust. All rights reserved.
-//
-
 #include "ColeFontManager.h"
 #include <iostream>
 #include "ResourcePath.h"

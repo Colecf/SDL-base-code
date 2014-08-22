@@ -1,11 +1,3 @@
-//
-//  ColeTileset.cpp
-//  MMO
-//
-//  Created by Cole Faust on 12/28/13.
-//  Copyright (c) 2013 Cole Faust. All rights reserved.
-//
-
 #include "ColeTileset.h"
 #include <fstream>
 #include <iostream>
