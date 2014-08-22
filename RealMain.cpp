@@ -1,0 +1,93 @@
+//
+//  RealMain.cpp
+//  MMO
+//
+//  Created by Cole Faust on 12/19/13.
+//  Copyright (c) 2013 Cole Faust. All rights reserved.
+//
+
+#include <iostream>
+#include "SDL2.h"
+#include "SDL2_image.h"
+#include "SDL2_ttf.h"
+#include "ResourcePath.h"
+#include "RealMain.h"
+#include "RenderManager.h"
+#include "ColeTexture.h"
+#include "ColeTileset.h"
+#include "ColeFontManager.h"
+#include "ColeScene.h"
+#include "FPSCounter.h"
+
+
+int realMain(int argc, char * arg[])
+{
+    ColeScene::penX = 0;
+    ColeScene::penY = 0;
+    if(SDL_Init(SDL_INIT_EVERYTHING) != 0)
+    {
+        std::cout << "ERROR SDL_Init" << std::endl;
+        return 1;
+    }
+    if (TTF_Init()==-1)
+    {
+        std::cout << "ERROR TTF_Init()" << TTF_GetError() << std::endl;
+        return 1;
+    }
+    int flags = IMG_INIT_JPG | IMG_INIT_PNG;
+    int initted = IMG_Init(flags);
+    if((initted&flags) != flags)
+    {
+        std::cout << "Error initing SDL_Image! " << IMG_GetError() << std::endl;
+        return 2;
+    }
+    if(SDLNet_Init() == -1)
+    {
+        std::cout << "ERROR SDLNet_Init: " << SDLNet_GetError() << std::endl;
+        return 1;
+    }
+    
+    RenderManager *render = RenderManager::getInstance();
+    render->init(SDL_CreateWindow("Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+                                           640, 480,SDL_WINDOW_SHOWN));
+    
+    //DO THIS FIRST
+    //ColeScene::currentScene =
+    
+    FPSCounter fps;
+    SDL_Delay(50);
+    fps.nextFrame();
+    
+    bool quit = false;
+    SDL_Event e;
+    while(!quit)
+    {
+        fps.limitTo(30);
+        fps.nextFrame();
+        while (SDL_PollEvent(&e) != 0)
+        {
+            if (e.type == SDL_MOUSEBUTTONDOWN || e.type == SDL_MOUSEBUTTONUP)
+            {
+                e.button.x /= render->getScaleX();
+                e.button.y /= render->getScaleY();
+            }
+            if (e.type == SDL_QUIT)
+            {
+                quit = true;
+            } else {
+                ColeScene::currentScene->onEvent(&e);
+            }
+        }
+        
+        render->clearScreen();
+        ColeScene::currentScene->update();
+        ColeScene::currentScene->render();
+        render->updateScreen();
+    }
+    
+    render->cleanup();
+    TTF_Quit();
+    IMG_Quit();
+    SDL_Quit();
+    return 0;
+}
